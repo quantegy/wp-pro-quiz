@@ -85,7 +85,7 @@ class WpProQuiz_View_FrontQuiz extends WpProQuiz_View_View {
 		}
 
 		?>
-		<div class="wpProQuiz_content" id="wpProQuiz_<?php echo $this->quiz->getId(); ?>">
+		<div aria-live="assertive" class="wpProQuiz_content" id="wpProQuiz_<?php echo $this->quiz->getId(); ?>">
 		<?php 
 			
 			if(!$this->quiz->isTitleHidden()) 
@@ -176,7 +176,7 @@ class WpProQuiz_View_FrontQuiz extends WpProQuiz_View_View {
 		$resultsProzent = json_encode($result['prozent']);
 		
 		?>
-		<div class="wpProQuiz_content" id="wpProQuiz_<?php echo $this->quiz->getId(); ?>">
+		<div aria-live="assertive" class="wpProQuiz_content" id="wpProQuiz_<?php echo $this->quiz->getId(); ?>">
 		<?php 
 			
 			if(!$this->quiz->isTitleHidden()) 
@@ -836,9 +836,9 @@ class WpProQuiz_View_FrontQuiz extends WpProQuiz_View_View {
 							<?php if($question->getAnswerType() === 'single' || $question->getAnswerType() === 'multiple') { ?>
 								<?php $json[$question->getId()]['correct'][] = (int)$v->isCorrect(); ?>
 									<span <?php echo $this->quiz->isNumberedAnswer() ? '' : 'style="display:none;"'?>></span>
-									<label>
+									<!--<label>-->
 										<input class="wpProQuiz_questionInput" type="<?php echo $question->getAnswerType() === 'single' ? 'radio' : 'checkbox'; ?>" name="question_<?php echo $this->quiz->getId(); ?>_<?php echo $question->getId(); ?>" value="<?php echo ($answer_index+1); ?>"> <?php echo $answer_text; ?>
-									</label>
+									<!--</label>-->
 							
 							<?php } else if($question->getAnswerType() === 'sort_answer') { ?>
 								<?php $json[$question->getId()]['correct'][] = (int)$answer_index; ?>
@@ -847,9 +847,9 @@ class WpProQuiz_View_FrontQuiz extends WpProQuiz_View_View {
 									</div>
 						 	<?php } else if($question->getAnswerType() === 'free_answer') { ?>
 						 		<?php $json[$question->getId()]['correct'] = $this->getFreeCorrect($v); ?>
-									<label>
+									<!--<label>-->
 										<input class="wpProQuiz_questionInput" type="text" name="question_<?php echo $this->quiz->getId(); ?>_<?php echo $question->getId(); ?>" style="width: 300px;">
-									</label>
+									<!--</label>-->
 						 	<?php } else if($question->getAnswerType() === 'matrix_sort_answer') { ?>
 						 		<?php
 						 			$json[$question->getId()]['correct'][] = (int)$answer_index;

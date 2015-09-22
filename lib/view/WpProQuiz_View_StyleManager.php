@@ -63,14 +63,14 @@ class WpProQuiz_View_StyleManager extends WpProQuiz_View_View {
 						
 						
 										<li class="wpProQuiz_questionListItem" style="">
-							<label>
-								<input class="wpProQuiz_questionInput" type="checkbox" name="question_5_26" value="2"> Test							</label>
+							<!--<label>-->
+								<input class="wpProQuiz_questionInput" type="checkbox" name="question_5_26" value="2"> Test							<!--</label>-->
 						</li><li class="wpProQuiz_questionListItem" style="">
-							<label>
-								<input class="wpProQuiz_questionInput" type="checkbox" name="question_5_26" value="1"> Test							</label>
+							<!--<label>-->
+								<input class="wpProQuiz_questionInput" type="checkbox" name="question_5_26" value="1"> Test							<!--</label>-->
 						</li><li class="wpProQuiz_questionListItem" style="">
-							<label>
-								<input class="wpProQuiz_questionInput" type="checkbox" name="question_5_26" value="3"> Test							</label>
+							<!--<label>-->
+								<input class="wpProQuiz_questionInput" type="checkbox" name="question_5_26" value="3"> Test							<!--</label>-->
 						</li></ul>
 				</div>
 				<div class="wpProQuiz_response" style="">
